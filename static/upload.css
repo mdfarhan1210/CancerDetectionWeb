@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center the menu horizontally */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+/* Section Styling */
+#upload {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Drag-and-Drop Area */
+#drop-area {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    background: #e6f7ff;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#drop-area:hover {
+    border-color: #0056b3;
+    background: #d9f0ff;
+}
+
+#drop-area p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#select-file {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#select-file:hover {
+    background-color: #0056b3;
+}
+
+/* Camera Feed */
+#camera-area {
+    margin: 20px 0;
+}
+
+#camera-area video {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+#capture {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#capture:hover {
+    background-color: #218838;
+}
+
+/* Preview Area */
+#preview-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#preview-image {
+    max-width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    #upload {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    #camera-area video {
+        max-height: 200px;
+    }
+}

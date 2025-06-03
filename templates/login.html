@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/signup">Signup</a>
+        <a href="/about">About Us</a>
+    </nav>
+    <section>
+        <h2 class="login">Login</h2>
+        <form action="/login" method="post">
+            <div class="form-group container">
+                <label for="username">Username:</label>
+                <span class="user-icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="password-container">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="password" name="password" required>
+                    <ion-icon id="password-icon" name="eye-outline" onclick="togglePasswordVisibility()"></ion-icon>
+                </div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p class="login">Don't have an account? <a href="/signup">Sign up here</a>.</p>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/static/passwordToggle.js" defer></script>
+</body>
+</html>

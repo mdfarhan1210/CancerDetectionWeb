@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/result.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/upload">Upload</a>
+        <a href="/profile">My Profile</a>
+        <a href="/logout">Logout</a>
+        <a href="/about">About Us</a>
+    </nav>
+    <section>
+        <h2>Prediction Result</h2>
+        <div class="result-container">
+            <div class="image-preview">
+                <img src="{{ image_url }}" alt="Uploaded Image" />
+            </div>
+            <div class="image-preview">
+                <img src="{{ heatmap_image_url }}" alt="Heatmap Image" />
+            </div>
+            <div class="image-preview">
+                <img src="{{ heatmap_with_original_image_url }}" alt="Heatmap With Original Image" />
+            </div>
+            <div class="predictions">
+                <strong>{{ predictions.get('model') }}:</strong> {{ predictions.get('predicted_class') }}
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

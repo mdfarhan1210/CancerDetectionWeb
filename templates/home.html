@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Image Classification</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/home.css">
+  <link rel="stylesheet" href="/static/chat.css">
+</head>
+
+<nav>
+  <a href="/">Home</a>
+  {% if user_is_authenticated %}
+  <a href="/upload">Upload</a>
+  <a href="/profile">My Profile</a>
+  <a href="/logout">Logout</a>
+  {% else %}
+  <a href="/login">Login</a>
+  <a href="/signup">Signup</a>
+  {% endif %}
+  <a href="/about">About Us</a>
+</nav>
+
+<body>
+
+  <!-- <img src="/static/images/skin.jpg" alt=" Check for signs of skin cancer " width="300px" height="100px"> -->
+  <div class="video-wrapper">
+    <!-- <div class="video-overlay">
+        <div class="play-button"></div>
+        <p class="video-text">WATCH VIDEO</p>
+      </div> -->
+    <video id="myVideo" autoplay muted>
+      <source src="/static/videos/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+ 
+  <section id="staging-info">
+    <div class="container">
+      <h2>What Is Skin Cancer</h2>
+      <p>Skin cancer is cancer that begins in skin cells and typically causes unusual growth or changes. Some types of skin cancer can spread to other parts of the body.
+
+        Skin cancer is the most common form of cancer. It occurs when there is an irregular growth of skin cells. The cells are also how physicians identify the type of skin cancer.
+        
+        The best way to understand skin cancer is to understand its different types and how they affect the body.
+        
+        </p>
+        <img src="/static/images/cskin.png" alt=" Check for signs of skin cancer " width="500px" height="400px">
+
+    <div class="container">
+      <h2>Determining the Extent of Skin Cancer</h2>
+      <p>Determining the extent of skin cancer, known as staging, is crucial for treatment and prognosis. It involves
+        assessing how far the cancer has spread within the skin and to other parts of the body.</p>
+      <ul>
+        <li><strong>Clinical Examination:</strong> Doctors visually examine the tumor, checking its size, depth, and
+          whether it has ulcerated.</li>
+        <li><strong>Biopsy:</strong> A sample of the tumor is taken to confirm the diagnosis and evaluate its depth
+          (thickness).</li>
+        <li><strong>Imaging Tests:</strong> For more advanced cases, imaging like CT scans, MRIs, or PET scans may be
+          done to detect spread to lymph nodes or other organs.</li>
+        <li><strong>Lymph Node Evaluation:</strong> If there's a concern the cancer has spread, a sentinel lymph node
+          biopsy is often performed to check the nearest lymph nodes for cancer cells.</li>
+      </ul>
+      <p>The stage of skin cancer, ranging from Stage 0 (localized) to Stage IV (spread to distant organs), helps guide
+        treatment decisions, which may include surgery, radiation, chemotherapy, or immunotherapy.</p>
+
+      <div class="container">
+        <h2>What You Need for a Skin Self-Exam</h2>
+        <p>The best time to check your own skin is after a bath or shower. Here’s what you’ll need to do a skin
+          self-exam that is as thorough as possible at home:</p>
+        <ul>
+          <li><strong>A well-lit room:</strong> Proper lighting helps you see any changes clearly.</li>
+          <li><strong>A full-length mirror:</strong> Allows you to examine large areas of your body.</li>
+          <li><strong>A hand-held mirror:</strong> Helps check areas that are hard to see.</li>
+          <li><strong>A spouse, partner, or close friend:</strong> They can assist with examining hard-to-see areas like
+            your back or scalp.</li>
+        </ul>
+        <h3>The First Time You Check Your Skin at Home:</h3>
+        <ul>
+          <li>Spend time carefully going over the entire surface of your skin.</li>
+          <li>Learn the pattern of moles, blemishes, freckles, and other marks so that you’ll notice any changes next
+            time.</li>
+          <li>Be sure to show your doctor any areas that concern you.</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <h2>Skin Self-Exam Steps</h2>
+        <p>Follow these step-by-step instructions to examine your skin at home:</p>
+        
+
+        <div class="exam-step">
+          <h3>Face the Mirror</h3>
+          <img src="/static/images/face-mirror.png"
+            alt="Man facing mirror, checking face, ears, neck, chest, and belly">
+          <p>Check your face, ears, neck, chest, and belly. Women will need to lift their breasts to check the skin
+            underneath.</p>
+        </div>
+
+        <div class="exam-step">
+          <img src="/static/images/arms-hands.png" alt="Man checking underarm, arms, hands, and fingernails">
+          <p>Check your underarm areas, both sides of your arms, the tops and palms of your hands, in between your
+            fingers, and under your fingernails.</p>
+        </div>
+
+        <div class="exam-step">
+          <h3>Sit Down</h3>
+          <img src="/static/images/legs-feet.png"
+            alt="Man sitting and checking thighs, shins, feet, toes, and toenails">
+          <p>Check the front of your thighs, shins, tops of your feet, in between your toes, and under your toenails.
+          </p>
+        </div>
+
+        <div class="exam-step">
+          <img src="/static/images/bottoms-feet.png"
+            alt="Man using a mirror to check the bottoms of feet, calves, and thighs">
+          <p>Now use a hand mirror to look at the bottoms of your feet, your calves, and the backs of your thighs, first
+            checking one leg and then the other.</p>
+        </div>
+
+        <div class="exam-step">
+          <img src="/static/images/back-check.png"
+            alt="Man using a mirror to check back, buttocks, genital area, and neck">
+          <p>Use the hand mirror to check your buttocks, genital area, lower and upper back, and the back of your neck
+            and ears. Or it may be easier to look at your back in the wall mirror using a hand mirror.</p>
+        </div>
+
+        <div class="exam-step">
+          <img src="/static/images/scalp-check.png" alt="Man using a comb to check scalp">
+          <p>Use a comb or hair dryer to part your hair so that you can check your scalp.</p>
+        </div>
+
+        <div class="container">
+          <h2>What Should I Look For?</h2>
+          <p>Check any moles, blemishes, or birthmarks from the top of your head to your toes. If you look at your skin
+            regularly, you will know what’s normal for you.</p>
+
+          <p>Many skin cancers are found on parts of the body that get more sun, such as the face, head, neck, and arms.
+            However, skin cancer can appear anywhere on the body.</p>
+
+          <p>Not all skin cancers look the same, and they can appear in various shapes and sizes. Some may resemble
+            non-cancerous skin conditions.</p>
+
+          <h3>Common Signs of Skin Cancer</h3>
+          <ul>
+            <li>A new, expanding, or changing growth, spot, or bump on the skin</li>
+            <li>A sore that bleeds and/or doesn’t heal after several weeks</li>
+            <li>A rough or scaly red patch, which might crust or bleed</li>
+            <li>A wart-like growth</li>
+            <li>A mole (or other spot) that’s new or changing in size, shape, or color</li>
+            <li>A mole with an odd shape, irregular borders, or areas of different colors</li>
+          </ul>
+
+          <p>It’s important to understand that these are not the only ways skin cancer can appear. If you notice any
+            unusual changes in your skin, consult a doctor.</p>
+        </div>
+        <div class="container">
+          <h2>If You Find Something Suspicious on Your Skin</h2>
+          <p>Whether you’re doing a skin self-exam or just looking at your skin at any time, you might notice something
+            that has just appeared or that has recently changed.</p>
+
+          <p>Maybe it’s a mole that looks new or different. Maybe it’s an area that’s dry and scaly and keeps coming
+            back.</p>
+
+          <p>No matter what you notice when you’re looking at your skin, if you see anything that concerns you, be sure
+            to have it checked by a doctor.</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What is Skin Cancer Detection?</span>
+              <span>▼</span>
+            </div>
+            <div class="faq-answer">
+              Skin Cancer Detection is a regulated medical service that takes control over your skin health to a new level.
+              It expands your ability to self-examine your skin and elevates your knowledge when to act, how and why.
+              It is designed to provide accurate and timely skin cancer detection,
+              along with the most reliable personalised skin health advice and health path recommendation.
+              At the centre of the service is the Skin Cancer Detection Web app,
+              which is a regulated medical device that merges AI technology with the expertise of skin health professionals
+              and dermatologists.
+              Skin Cancer Detection is a service of choice whether you want to address your most immediate concerns,
+              learn what steps you should take next, understand your skin risk profile and introduce the most intelligent skin
+              health regime to your seasonal rhythm.
+      
+              <br><br>
+              <a href="#">Learn more</a>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can Skin Cancer Detection help me detect skin cancer?</span>
+              <span>▼</span>
+            </div>
+            <div class="faq-answer">
+              With the Skin Cancer Detection web app, you can immediately detect signs of the most common types of skin
+              cancer, but it is not a diagnosis.
+              Early detection is critical in skin cancer treatment and is one of the greatest challenges of modern
+              dermatology,
+              posing significant risk to your health and life.
+              The sooner you detect a potential risk and get in touch with your doctor, the higher the chance you will avoid
+              the worst outcome.
+              If you detect a sign of skin cancer using the Skin Cancer Detection service,
+              we advise you to visit a doctor, who can make a definite diagnosis if you need to be treated for skin cancer.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What are the symptoms of skin cancer?</span>
+              <span>▼</span>
+            </div>
+            <div class="faq-answer">
+              Most cancers have some pretty obvious signs,
+              including lumps and bumps, tenderness, pain or sickness.
+              But when it comes to skin cancer symptoms, they aren't always as plain to see.
+              Skin cancer is slow-growing and often free of glaring warning signs.
+              This can make early detection tricky.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What is a mole and how do you know it's safe?</span>
+              <span>▼</span>
+            </div>
+            <div class="faq-answer">
+              While for many of us moles are just brown spots on our body we may not pay much attention to,
+              they come in various shapes, sizes, and forms that can tell us important things about our skin health.
+              Understanding all types of skin moles helps us identify any suspicious spots for skin cancer and keep our skin
+              healthy.
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+  </section>
+
+  </div>
+  </section>
+
+  <!-- Popup chat window -->
+
+  <!-- chat open -->
+  <div class="chat-bar-open" id="chat-open">
+    <button id="chat-open-button" type="button" class="collapsible close" onclick="chatOpen()">
+      <img src="/static/images/Sparrow Bird.png" alt="Sparrow Bird image" />
+    </button>
+  </div>
+
+  <!-- chat close -->
+  <div class="chat-bar-close" id="chat-close">
+    <button id="chat-close-button" type="button" class="collapsible close" onclick="chatClose()">
+      <i class="material-icons-outlined"> close </i>
+    </button>
+  </div>
+
+  <!-- chat-window 1 -->
+  <div class="chat-window" id="chat-window1">
+    <div class="hi-there">
+      <p class="p1">Hi There</p>
+      <br />
+      <p class="p2">Hello Ask Us Anythig,Share Your<br />Feedback.</p>
+    </div>
+    <div class="start-conversation">
+      <h1>Start a Conversation</h1>
+      <br />
+      <p>The team typically replies in few minutes.</p>
+      <button class="new-conversation" type="button" onclick="openConversation()">
+        <span>New Conversation</span><i class="material-icons-outlined"> send </i>
+      </button>
+    </div>
+  </div>
+
+  <!-- chat chat-window 2 -->
+  <div class="chat-window2" id="chat-window2">
+    <div class="message-box" id="messageBox">
+      <div class="hi-there">
+        <p class="p1">Hi There</p>
+        <br />
+        <p class="p2">The team typically replies in few minutes.</p>
+      </div>
+      <div class="first-chat">
+        <p>Is there any offlines versions available for Maxeon Player?</p>
+        <div class="arrow"></div>
+      </div>
+      <div class="second-chat">
+        <div class="circle"></div>
+        <p>Currently we don't have but we will launch soon.</p>
+        <div class="arrow"></div>
+      </div>
+    </div>
+    <div class="input-box">
+      <div class="write-reply">
+        <input class="inputText" type="text" id="textInput" placeholder="Write a reply..." />
+      </div>
+      <div class="send-button">
+        <button type="submit" class="send-message" id="send" onclick="userResponse()">
+          <i class="material-icons-outlined"> send </i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+    // Toggle FAQ answer visibility
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        const isOpen = answer.style.display === 'block';
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+        answer.style.display = isOpen ? 'none' : 'block';
+      });
+    });
+
+  </script>
+  <script src="/static/chat.js" defer></script>
+</body>
+
+</html>

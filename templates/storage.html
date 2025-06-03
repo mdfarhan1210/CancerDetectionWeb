@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Image Classification</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        {% if user_is_authenticated %}
+        <a href="/upload">Upload</a>
+        <a href="/profile">My Profile</a>
+        <a href="/logout">Logout</a>
+        {% else %}
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+        {% endif %}
+        <a href="/about">About Us</a>
+    </nav>
+    <img src="/static/images/skin.jpg" alt=" Check for signs of skin cancer " width="1700px" height="300px">
+    <section id="home">
+        <h1>Try the world's premiere skin cancer detection tool</h1>
+        <p>Use this web application to classify images as benign or malignant.</p>
+        <img src="/static/images/cskin.png" alt=" Check for signs of skin cancer " width="500px" height="400px">
+
+
+    </section>
+    <div id="dis"> 
+        <h2>Determining the extent of the skin cancer</h2>
+        <p>Determining the extent of skin cancer, known as staging, is crucial for treatment and prognosis. It involves assessing how far the cancer has spread within the skin and to other parts of the body.
+
+            Clinical Examination:  Doctors visually examine the tumor, checking its size, depth, and whether it has ulcerated.
+            Biopsy:  A sample of the tumor is taken to confirm the diagnosis and evaluate its depth (thickness).
+            Imaging Tests:  For more advanced cases, imaging like CT scans, MRIs, or PET scans may be done to detect spread to lymph nodes or other organs.
+            Lymph Node Evaluation:  If there's a concern the cancer has spread, a sentinel lymph node biopsy is often performed to check the nearest lymph nodes for cancer cells.
+
+            The stage of skin cancer, ranging from Stage 0 (localized) to Stage IV (spread to distant organs), helps guide treatment decisions, which may include surgery, radiation, chemotherapy, or immunotherapy.</p>
+    </div>
+
+</body>
+
+</html>

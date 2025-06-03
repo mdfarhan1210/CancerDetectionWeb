@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User Profile</title>
+    <link rel="stylesheet" href="/static/edit_profile.css">
+    <style>
+        button:disabled {
+            cursor: not-allowed; /* Cursor when button is disabled */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/upload">Upload</a>
+        <a href="/profile">My Profile</a>
+        <a href="/logout">Logout</a>
+        <a href="/about">About Us</a>
+    </nav>
+    <main>
+        <form action="/profile/update" method="post" enctype="multipart/form-data">
+            <div class="form-group checkbox-field">
+                <label for="username">New Username:</label>
+                <input type="checkbox" id="changeUsernameCheckbox" value="2">
+                <input type="text" id="username" name="username" placeholder="{{ user.username }}" disabled>
+            </div>
+
+            <div class="form-group checkbox-field">
+                <label for="email">New Email:</label>
+                <input type="checkbox" id="changeEmailCheckbox" value="2">
+                <input type="email" id="email" name="email" placeholder="{{ user.email }}" disabled>
+            </div>
+
+            <div class="form-group checkbox-field">
+                <label for="password">New Password:</label>
+                <input type="checkbox" id="changePasswordCheckbox" value="2">
+                <input type="password" id="password" name="password" placeholder="New Password" disabled>
+                <ion-icon id="password-icon" name="eye-outline" onclick="togglePasswordVisibility()"></ion-icon>
+            </div>
+
+            <div class="form-group checkbox-field">
+                <label for="file">Profile Picture:</label>
+                <input type="checkbox" id="changePictureCheckbox" value="2">
+                <div id="drop-area">
+                    <p style="color: black;">Drag & Drop your image here or click to select</p>
+                    <input id="file" name="file" type="file" accept="image/*" disabled style="display:none;">
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn" disabled>Update Profile</button>
+        </form>
+    </main>
+
+    <script src="/static/edit_profile.js" defer></script>
+    <script src="/static/image_upload.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/static/passwordToggle.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Image Classification</title>
+    <link rel="stylesheet" href="/static/about.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        {% if user_is_authenticated %}
+        <a href="/upload">Upload</a>
+        <a href="/profile">My Profile</a>
+        <a href="/logout">Logout</a>
+        {% else %}
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+        {% endif %}
+        <a href="/about">About Us</a>
+    </nav>
+    <section id="about">
+        <div class="tutorial-container">
+            <h2>Tutorials for a Smooth Experience</h2>
+            <div class="tutorial-steps">
+                <h3>How to Use</h3>
+                <p><strong>Step 1:</strong> First, register yourself through the signup page. It will require your email ID, name, phone number, age, and gender. If you are already registered, please proceed to the login page.</p>
+                <p><strong>Step 2:</strong> Log in using your username and password.</p>
+                <p><strong>Step 3:</strong> After logging in, navigate to the upload page, where you can either upload an image or take a live image. Submit it and wait for the result.</p>
+                <p><strong>Final Step:</strong> Once the result appears, review it carefully. Regardless of whether the result indicates benign or malignant, do not hesitate to consult a doctor for professional advice.</p>
+            </div>
+            <div class="video-container">
+                <h3>Watch the Video</h3>
+                <video controls>
+                    <source src="/static/videos/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    
+        </div>
+        <h2>About us </h2>
+        <p>Our web application leverages TensorFlow and advanced machine learning algorithms to assist in the early detection of skin cancer. By analyzing uploaded images of skin lesions, the system identifies potential signs of melanoma and other skin cancers. With a user-friendly interface, it enables quick image uploads and delivers instant, accurate results. The app is built to ensure user privacy and secure handling of data. Our aim is to provide a reliable tool that uses AI technology to support early diagnosis, improving treatment outcomes through timely detection.</p>
+        <div class="container">
+        <img src="static/images/hair.png" alt=" Check for signs of skin cancer " width="400px" height="400px">   
+        <h3>General Information About Skin Cancer</h3>
+        <p>Skin cancer is a disease in which malignant (cancer) cells form in the tissues of the skin.</p>
+        <p>Skin cancer is the most common cancer in the United States.</p>
+        <p>Different factors increase or decrease the risk of skin cancer.</p>
+
+        <h3>Types of Skin Cancer</h3>
+        <p>There are two main types of skin cancer:</p>
+        <p>Nonmelanoma, also called keratinocyte carcinoma, includes squamous cell carcinoma (SCC) and basal cell carcinoma.</p>
+        <p>Melanoma is more likely to spread and harder to cure if not detected early.</p>
+
+        <h3>Skin Cancer Screening</h3>
+        <p>Screening for skin cancer may include examination by both the patient and the health care provider.</p>
+        <p>Regular self-examinations and dermatologist check-ups are important.</p>
+        <p>If an area on the skin looks abnormal, a biopsy is usually done.</p>
+
+        <h3>Risks of Skin Cancer Screening</h3>
+        <p>Finding skin cancer does not always improve health or help you live longer.</p>
+        <p>False-negative test results can give a false sense of security.</p>
+        <p>False-positive test results can lead to unnecessary tests and anxiety.</p>
+        <p>Biopsies may cause scarring or infection.</p>
+
+        <p>Talk to your doctor about your risk for skin cancer and your need for screening tests.</p>
+        <img src="static/images/Skin check WEB 2021.png" alt=" Check for signs of skin cancer " width="500px" height="500px"
+    </div>
+        
+    </section>
+</body>
+
+</html>

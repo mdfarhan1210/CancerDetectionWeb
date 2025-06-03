@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# Models
+models/
+
+# Dataset
+data/
+
+#images/videos/uploads
+static/images/
+static/uploads/
+static/videos/

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/profile.css">
+   
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/upload">Upload</a>
+        <a href="/profile">My Profile</a>
+        <a href="/logout">Logout</a>
+        <a href="/about">About Us</a>
+    </nav>
+    <main>
+        <div class="center">
+            <a target="_blank" href="/{{ user.profile_picture }}">
+                <img src="/{{ user.profile_picture }}" alt="User Profile Picture">
+            </a>
+            <h2>Welcome, {{ user.username }}!</h2>
+            <p>Email: {{ user.email }}</p>   
+            <div class="profile-info">
+
+                <h3>Profile Details</h3>
+
+                <div class="profile-detail">
+                    <label for="gender">Name:</label>
+                    <span id="gender">{{ Name }}</span>
+                </div>
+                <div class="profile-detail">
+                    <label for="gender">Pratientid:</label>
+                    <span id="gender">{{ pratientid }}</span>
+                </div>
+                <div class="profile-detail">
+                    <label for="gender">Gender:</label>
+                    <span id="gender">{{ gender }}</span>
+                </div>
+                <div class="profile-detail">
+                    <label for="age">Age:</label>
+                    <span id="age">{{ age }}</span>
+                </div>
+            </div>
+            
+            <p>
+                <a href="/edit_profile" id="edit-profile-button">Edit Profile</a>
+            </p>
+            <p>Uploaded Images:</p>
+
+            <div>
+                {% for image in images %}
+                <div class="gallery">
+                    <a target="_blank" href="/{{ image.filepath }}">
+                        <img src="/{{ image.filepath }}" alt="Uploaded Image" style="width: 600; height: 400;">
+                        <label>{{ image.prediction }}</label>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
