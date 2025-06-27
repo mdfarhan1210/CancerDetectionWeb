@@ -1,4 +1,4 @@
-# 🛡️ Project Name
+# 🛡️ CancerDetectionWeb
 
 A web application built using **FastAPI**. This project includes essential backend functionality and uses `cryptography` for secure data operations.
 
